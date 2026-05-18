@@ -899,7 +899,7 @@ async function loadRCIMap() {
     if(!valid.length) return;
     roadsLayer=L.geoJSON({type:'FeatureCollection',features:valid.map(r=>({
       type:'Feature',
-      properties:{gid:r.gid,roadname:r.roadname||'Unnamed',roadcode:r.roadcode||'—',condition:r.condition||'Unknown',rci_value:r.rci_value,pothole_count:r.pothole_count||0,density_per_km:r.density_per_km||0,color:r.road_color||'#808080'},
+      properties:{gid:r.gid,roadname:r.roadname||'Unnamed',roadcode:r.roadcode||'—',condition:r.condition||'Unknown',rci_value:r.rci_value,pothole_count:r.pothole_count||0,density_per_km:r.density_per_km||0,color:COND_COLOR[r.condition]||'#808080'},
       geometry:r.geometry
     }))},{
       style:f=>({color:f.properties.color,weight:2.5,opacity:0.9,lineCap:'round',lineJoin:'round'}),
