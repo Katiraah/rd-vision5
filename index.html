@@ -869,10 +869,10 @@ function initRCIMap() {
   legend.onAdd=function(){
     const div=L.DomUtil.create('div','leaflet-legend');
     div.innerHTML=`<div class="leaflet-legend-title">legend</div><span class="leaflet-legend-subtitle">RCI MAP</span>
-      <div class="leaflet-legend-item"><div class="leaflet-legend-color" style="background:#228B22;"></div><span>Perfect</span><span class="leaflet-legend-rci">0 p/km</span></div>
-      <div class="leaflet-legend-item"><div class="leaflet-legend-color" style="background:#32CD32;"></div><span>Good</span><span class="leaflet-legend-rci">0–2 p/km</span></div>
-      <div class="leaflet-legend-item"><div class="leaflet-legend-color" style="background:#FFA500;"></div><span>Average</span><span class="leaflet-legend-rci">2–6 p/km</span></div>
-      <div class="leaflet-legend-item"><div class="leaflet-legend-color" style="background:#EF4444;"></div><span>Poor</span><span class="leaflet-legend-rci">>6 p/km</span></div>`;
+      <div class="leaflet-legend-item"><div class="leaflet-legend-color" style="background:#228B22;"></div><span>Perfect</span><span class="leaflet-legend-rci"></span></div>
+      <div class="leaflet-legend-item"><div class="leaflet-legend-color" style="background:#32CD32;"></div><span>Good</span><span class="leaflet-legend-rci"></span></div>
+      <div class="leaflet-legend-item"><div class="leaflet-legend-color" style="background:#FFA500;"></div><span>Average</span><span class="leaflet-legend-rci"></span></div>
+      <div class="leaflet-legend-item"><div class="leaflet-legend-color" style="background:#EF4444;"></div><span>Poor</span><span class="leaflet-legend-rci"></span></div>`;
     return div;
   };
   legend.addTo(rciMap);
