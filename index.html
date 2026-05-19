@@ -620,7 +620,7 @@ function updateBadges(roads) {
 // ── API ───────────────────────────────────────────────────────────────────────
 async function loadStats() {
   try {
-    const ctrl=new AbortController(); const tid=setTimeout(()=>ctrl.abort(),30000);
+    const ctrl=new AbortController(); const tid=setTimeout(()=>ctrl.abort(),50000);
     const res=await fetch(`${API}/stats`,{signal:ctrl.signal}); clearTimeout(tid);
     if(!res.ok) throw new Error(`HTTP ${res.status}`);
     const data=await res.json(); if(!data.success) throw new Error(data.error);
@@ -636,7 +636,7 @@ async function loadStats() {
 
 async function loadRoads() {
   try {
-    const ctrl=new AbortController(); const tid=setTimeout(()=>ctrl.abort(),45000);
+    const ctrl=new AbortController(); const tid=setTimeout(()=>ctrl.abort(),50000);
     const res=await fetch(`${API}/roads`,{signal:ctrl.signal}); clearTimeout(tid);
     if(!res.ok) throw new Error(`HTTP ${res.status}`);
     const data=await res.json(); if(!data.success) throw new Error(data.error);
