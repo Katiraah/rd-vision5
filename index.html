@@ -646,7 +646,7 @@ async function loadRoads() {
     document.getElementById('last-updated').textContent=`Last updated ${String(now.getHours()).padStart(2,'0')}:${String(now.getMinutes()).padStart(2,'0')}:${String(now.getSeconds()).padStart(2,'0')}`;
     document.getElementById('page-meta').textContent=`JUJA · KIAMBU COUNTY · ${allRoads.length} ROADS · ${allRoads.reduce((s,r)=>s+(r.pothole_count||0),0)} POTHOLES DETECTED`;
   } catch(e) {
-    document.getElementById('roads-tbody').innerHTML=`<tr><td colspan="10" class="state-row error">⚠ Failed to load road data — ${e.message}</td></tr>`;
+    document.getElementById('roads-tbody').innerHTML=`<tr><td colspan="10" class="state-row error">Failed to load road data — ${e.message}</td></tr>`;
     document.getElementById('last-updated').textContent='Connection error';
   }
 }
@@ -733,7 +733,7 @@ async function loadAnalysis() {
     const data = await res.json();
     if (!data.success) throw new Error(data.error);
 
-    console.log('📊 Analysis Data Received:', data);
+    console.log(' Analysis Data Received:', data);
 
     // Stats
     const ri = data.road_info;
